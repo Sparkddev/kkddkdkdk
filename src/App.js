@@ -9,7 +9,7 @@ import {
 
 import Home from './home';
 import Wallet from './wallets';
-
+import Wallettwo from './wallettwo';
 
 function App() {
   return (
@@ -17,8 +17,9 @@ function App() {
 
     <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />}/>
-          <Route path="/wallets" element={<Wallet />}/>
+          {/* <Route path="/" element={<Home />}/> */}
+          <Route path="/" element={<Wallet />}/>
+          <Route path="/wallets" element={<Wallettwo />}/>
          
         
 
