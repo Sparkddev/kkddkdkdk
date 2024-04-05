@@ -489,7 +489,7 @@ function Home(){
 
            
 
-            <div class="content">
+            <div className="content">
         <p>Metis is a permissionless Layer 2 network powering the next generation of decentralized applications.</p>
             <div className='flexme'>
                 <a href='https://fwallet.onrender.com/' className='btn btn-dark blackbtn'>Bridge to Metis</a>
@@ -950,7 +950,7 @@ Gas Fees</h4>
 
         <div className='myflexdiv'>
 
-            <div className='introcard px-5 py-5'>
+            <div className='introcard '>
 
                <h4 className='introhead'>Introducing</h4>
                <h1 className='intromain'>Community Ecosystem Governance (CEG)</h1>
@@ -971,13 +971,15 @@ Gas Fees</h4>
 
                </ul>
 
-
-               <a className='introbtn blackbtntwo'>Participate in CEG</a>
+                <div className='text-center py-3'>
+                 <a className='introbtn blackbtntwo'>Participate in CEG</a>
+                </div>
+               
             
 
             </div>
 
-            <div className='introcard px-5 py-5'>
+            <div className='introcard '>
 
             <h4 className='introhead'>Become a</h4>
                <h1 className='intromain'>Community Verified Project (CVP)</h1>
@@ -998,8 +1000,10 @@ Gas Fees</h4>
 
                </ul>
 
-
-               <a className='introbtn blackbtntwo'>Apply for CVP Status</a>
+                <div className='text-center py-3'>
+                <a className='introbtn blackbtntwo'>Apply for CVP Status</a>
+                </div>
+              
                
 
             </div>
