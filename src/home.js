@@ -105,6 +105,8 @@ import sevenone from './sevenone.svg';
 
 import tracker from './tracker.png';
 
+import fwallet from './fwallets.svg';
+
 
 function Home(){
 
@@ -140,7 +142,7 @@ function Home(){
             {/* nav */}
 
             <nav className='mobilenav py-2 px-4 fixed-top'>
-                <img onClick={toggleMenu} className='hamb' src={hamburger} />  <a class="navbar-brand" href="#"><img className='mobilelogoimage' src={metis} /></a>
+                <img onClick={toggleMenu} className='hamb' src={hamburger} />  <a class="navbar-brand" href="#"><img className='mobilelogoimage' src={fwallet} /></a>
 
             </nav>
 
@@ -211,7 +213,7 @@ function Home(){
             <nav class="navbar fixed-top navbar-expand-lg mynav navbar-light desktopnav">
   <a class="navbar-brand" href="#"><img style={{
       width:"130px",
-  }} src={metis} /></a>
+  }} src={fwallet} /></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -1062,7 +1064,7 @@ Gas Fees</h4>
         <div className='col-md-4 col-sm-12'>
           
 
-            <img className='footerlogo mb-3' src={metis} />
+            <img className='footerlogo mb-3' src={fwallet} />
 
             <div className='flexdiv my-3'style={{
                 
