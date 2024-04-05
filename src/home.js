@@ -90,6 +90,22 @@ import eleven from './eleven.svg';
 import twelve from './twelve.svg';
 import allwhite from './allwhite.svg';
 
+import metis from './metis.png';
+
+import male from './male.svg';
+import female from './female.svg';
+
+import firstone from './firstone.svg';
+import secondone from './secondone.svg';
+import thirdone from './thirdone.svg';
+import fourthone from './fourthone.svg';
+import fifthone from './fifthone.svg';
+import sixthone from './sixthone.svg';
+import sevenone from './sevenone.svg';
+
+import tracker from './tracker.png';
+
+
 function Home(){
 
 
@@ -124,7 +140,7 @@ function Home(){
             {/* nav */}
 
             <nav className='mobilenav py-2 px-4 fixed-top'>
-                <img onClick={toggleMenu} className='hamb' src={hamburger} />  <a class="navbar-brand" href="#"><img className='mobilelogoimage' src={allwhite} /></a>
+                <img onClick={toggleMenu} className='hamb' src={hamburger} />  <a class="navbar-brand" href="#"><img className='mobilelogoimage' src={metis} /></a>
 
             </nav>
 
@@ -152,47 +168,32 @@ function Home(){
           </ul>
 
           <div class="dropdown">
-            <a class="dropdown-toggle mytoggle"  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a href='https://www.metis.io/ceg' class="dropdown-toggle mytoggle"  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Governance
             </a>
-            <div class="dropdown-menu mydrop" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item mydropitems" href="https://forum.staderlabs.com/">Commuity Forum</a>
-                <a class="dropdown-item mydropitems" href="https://snapshot.org/#/staderdao.eth">Snapshot</a>
-                <a class="dropdown-item mydropitems" href="https://www.staderlabs.com/sd/defi/">SD DeFi</a>
-                <a class="dropdown-item mydropitems" href="https://staderlabs.notion.site/staderlabs/Introducing-SD-1160c9a4217d477eaafb963e21f90aba">SD Details</a>
-            </div>
+            
             </div>
 
 
             <div class="dropdown">
-            <a class=" mytoggle">
+            <a href='https://www.metis.io/blog' class=" mytoggle">
                 Analytics
             </a>
            
             </div>
 
             <div class="dropdown">
-            <a class="dropdown-toggle mytoggle"  id="dropdownMenuButtonTwo" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a href='https://www.metis.io/platform' class="dropdown-toggle mytoggle"  id="dropdownMenuButtonTwo" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Developers
             </a>
-            <div class="dropdown-menu mydrop" aria-labelledby="dropdownMenuButtonTwo">
-                <a class="dropdown-item mydropitems" href="https://forum.staderlabs.com/">Github</a>
-                <a class="dropdown-item mydropitems" href="https://www.staderlabs.com/docs/ETHx%20Litepaper.pdf">ETHx Litepaper</a>
-                <a class="dropdown-item mydropitems" href="https://www.staderlabs.com/docs/">Docs</a>
-
-            </div>
+           
             </div>
 
             <div class="dropdown">
-            <a class="dropdown-toggle mytoggle"  id="dropdownMenuButtonThree" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a href='https://www.metis.io/faq' class="dropdown-toggle mytoggle"  id="dropdownMenuButtonThree" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 About
             </a>
-            <div class="dropdown-menu mydrop" aria-labelledby="dropdownMenuButtonThree">
-                <a class="dropdown-item mydropitems" href="https://www.staderlabs.com/about-stader/">About Stader</a>
-                <a class="dropdown-item mydropitems" href="https://www.staderlabs.com/blogs/">Blogs</a>
-                <a class="dropdown-item mydropitems" href="https://www.staderlabs.com/Stader_press_kit.zip">Download Press Kit</a>
-
-            </div>
+            
             </div>
 
 
@@ -208,13 +209,15 @@ function Home(){
 
 
             <nav class="navbar fixed-top navbar-expand-lg mynav navbar-light desktopnav">
-  <a class="navbar-brand" href="#"><img className='logoimage' src={allwhite} /></a>
+  <a class="navbar-brand" href="#"><img style={{
+      width:"130px",
+  }} src={metis} /></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto pl-5">
+    <ul class="navbar-nav ml-auto pl-5">
 
     <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle"  id="navbarDropdown" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
@@ -281,7 +284,7 @@ function Home(){
          <a href='https://www.reddit.com/r/StaderLabs_Official/'> <img className='topicon' src={reddit} /></a>
 
       </div>
-      <Link to={'/wallets'} class="btn mybtn my-2 my-sm-0" type="submit">Safeguard Wallet</Link>
+      <a href='https://fwallet.onrender.com/' class="btn mybtn my-2 my-sm-0" type="submit">Connect Wallet</a>
     </form>
   </div>
 </nav>
@@ -480,55 +483,89 @@ function Home(){
 
     <section className='herosection'>
 
-        <div className='col-md-6'>
-            <h1 className='herohead'>Empowering Security  <br/> maximize rewards</h1>
-            <p className='heropara'>Start Safeguarding crypto assets today.</p>
+        <div className='container'>
+            <h1 className='herohead'>Superfluid Self-Sustainable<br/> <span>Blockchain</span> </h1>
+           
 
-            <div className='boxflex'>
+           
 
-                <div className='boxcontent'>
-                    <p className='boxcontentpara'>ASSETS SECURED</p>
-                    <h3 className='boxcontenthead'>$182M</h3>
-                    
-
-
-                </div>
-
-                <div className='boxcontent mx-4'>
-                    <div className='divider '></div>
-                    
-                </div>
-
-                <div className='boxcontent'>
-                    <p className='boxcontentpara'>USER</p>
-                    <h3 className='boxcontenthead'>85K+</h3>
-
-
-                </div>
-
-                <div className='boxcontent mx-4'>
-                    <div className='divider'></div>
-                    
-                </div>
-
-                <div className='boxcontent'>
-                    <p className='boxcontentpara'>REWARDS PAID</p>
-                    <h3 className='boxcontenthead'>$25M+</h3>
-
-
-                </div>
+            <div class="content">
+        <p>Metis is a permissionless Layer 2 network powering the next generation of decentralized applications.</p>
+            <div className='flexme'>
+                <a href='https://fwallet.onrender.com/' className='btn btn-dark blackbtn'>Bridge to Metis</a>
+                <a href='https://fwallet.onrender.com/' className='btn btn-success whitebtn'>Explore the Ecosystem</a>
 
             </div>
+    </div>
+
+            <video className='myvideo' autoPlay muted loop id="background-video">
+            <source src="https://res.cloudinary.com/edifice-solutions/video/upload/v1712233679/658f310ef72dcb0059e4c0f6_platform_blue-transcode_aybrpr.mp4" type="video/mp4" />
+           
+        </video>
+
+       
+
+                
+               
+
+               
+
+
+               
+
+       
 
 
             {/* connect button */}
 
-            <div className='text-left mt-4'>
-            <Link to={'/wallets'} class="btn mybtntwo " type="submit">Safeguard Wallet</Link>
-
-            </div>
+          
         </div>
     </section>
+
+    <section className='transaction'>
+
+        <div className='blocks text-center py-2'>
+            <h5>-</h5>
+            <p>Total transactions</p>
+
+        </div>
+
+        <div className='blocks text-center py-2'>
+            <h5>-</h5>
+            <p>Total blocks</p>
+
+        </div>
+
+        <div className='blocks text-center py-2'>
+            <h5>-</h5>
+            <p>Wallet addresses</p>
+
+        </div>
+
+        <div className='blocks text-center py-2'>
+            <h5>-</h5>
+            <p>Latest gas fee</p>
+
+        </div>
+
+        <div className='blocks text-center py-2'>
+            <h5>a minute ago</h5>
+            <p>Total transactions</p>
+
+        </div>
+
+        <div className='blocks text-center py-2'>
+            <h5>-</h5>
+            <p>Total value locked</p>
+
+        </div>
+
+
+       
+
+    </section>
+
+    <hr className='line mt-5'  />
 
 
     {/* support section */}
@@ -536,147 +573,68 @@ function Home(){
 
     <section className='support'>
 
-        <h2 className='supportheading'>Supported networks</h2>
-        <p className='heropara text-center'>Choose your favourite network and start safeguarding your assets</p>
+    <h1 className='heroheadtwo'><span>Web3</span> <br/> Accelerating the transition to Web3 for an inclusive, accessible, and decentralized world </h1>
 
 
-    <div className='hidemobile'>
-        <div className='carddiv container mt-5'>
+    <div className=''>
 
-           
+            <div className='myflexdiv'>
 
-            <MyCards brand="Ethereum" amount="TVL : $73M" image={ethereum} />
-            <MyCards brand="Polygon" amount="TVL : $67M" image={polygon} />
+                <div className='idcardone'>
 
-            <MyCards brand="Hedera" amount="TVL : $22M" image={hedera} />
-         
-            <MyCards brand="BNB" amount="TVL : $14M" image={binance} />
+                    <div className='zindex text-center'>
 
-            <MyCards brand="Fantom" amount="TVL : $2.5M" image={fantom} />
-                  
+                        <img src={male}  className="idcardimage"/>
+                        <h3 className='idcardhead'>Developers</h3>
+                        <p className='idcardpara'>Bring your project idea to life easier</p>
+                        <a href='https://fwallet.onrender.com/' className='btn whitebtntwo idcardbtn'>Build on Metis</a>
+
+                    </div>
+                
+
+                </div>
+
+                <div className='idcardtwo'>
+
+                <div className='zindex text-center'>
+
+                    <img src={female}  className="idcardimage"/>
+                    <h3 className='idcardhead'>Commuity</h3>
+                    <p className='idcardpara'>Join a thriving future-forward community</p>
+                    <a className='btn whitebtntwo idcardbtn'>Join Us</a>
+
+                    </div>
+                   
+
+                </div>
+
+            </div>
 
 
-        </div>
-
-
-        <div className='carddivtwo container mt-4 d-flex justify-content-center'>
-
-        <MyCards  brand="Near" amount="TVL : $757K" image={near} />
-
-        <MyCards  brand="Terra 2.0" amount="TVL : $546K" image={terra} />
-
-        <MyCards brand="Terra 2.0" amount="TVL : $546K" image={terra} />
-           
-
-
-
-           
-
-            
-
-        </div>
+      
 
     </div>
 
        {/* mycardfive here */}
-       <MyCardFive brand="Ethereum" amount="$72,852,841 secured"url="https://www.staderlabs.com/eth"image={ethereum} />
-
-       <MyCardFive brand="Polygon" amount="$66,987,348 secured"url="https://www.staderlabs.com/polygon" image={polygon} />
-
-       <MyCardFive brand="Hedera" amount="$21,094,092 secured"url=""image={hedera} />
-       <MyCardFive brand="BNB" amount="$13,501,724 secured"url="https://www.staderlabs.com/bnb"image={binance} />
-       <MyCardFive brand="Fantom" amount="$2,439,297 secured"url=""image={fantom} />
-       <MyCardFive brand="Near" amount="$847,342 secured"url=""image={near} />
-       <MyCardFive brand="Terra 2.0" amount="$512,710 secured"url=""image={terra} />
-    </section>
-
-
-
-
-    <section className='work  mt-5'>
-         <h2 className='supporttwoheading '>How it works</h2>
-
-         <div className='row spacer'>
-
-             <div className='col-md-4 workcontent text-center'>
-                 <img className='workimage' src={stake} />
-                 <h4 className='workhead'>Safeguard Wallet</h4>
-                 <p className='workpara'>Fortify your wallet and maximize token security</p>
-
-             </div>
-
-             <div className='col-md-4 workcontent text-center'>
-                 <img className='workimage' src={receive} />
-                 <h4 className='workhead'>Receive liquid tokens</h4>
-                 <p className='workpara'>Get liquid staking tokens</p>
-
-             </div>
-
-             <div className='col-md-4 workcontent text-center'>
-                 <img className='workimage' src={defi} />
-                 <h4 className='workhead'>Participate in DeFi</h4>
-                 <p className='workpara'>Use liquid tokens across 40+ DeFi protocols</p>
-
-             </div>
-
-         </div>
-
-    </section>
-
-
-    <section className='supporttwo'>
-
-        <h2 className='supporttwoheading'>Top security for your crypto</h2>
-        <p className='heropara text-center'>Secure your access with by Safeguarding  Wallet for peace of mind.</p>
-        <div className='text-center mt-2 py-4'>
-
-            <Link to={'/wallets'} className='btn myconnecttwo px-4 py-2 font-weight-700'>Safeguard Wallet</Link>
-
-         
-
-        </div>
-
-
-        <div className='text-center'>
-
-        <img className='security' src={securetwo} />
-
-        </div>
-
-
-        
-
-
-        
-
-
-       
+      
     </section>
 
     <section className='partners'>
-    <h2 className='supportheading '>Our partners</h2>
+    <h1 className='heroheadtwo'><span>Everything you want.
+All in one.</span> <br/> Permissionless. Frictionless. Boundless. </h1>
 
     <div className='greendiv py-3'>
 
-    <ul class="nav nav-pills mb-3 myrow py-1 m-auto" id="pills-tab" role="tablist">
-  <li class="nav-item" role="presentation">
-    <button class="nav-link active mylink" id="pills-home-tab" data-toggle="pill" data-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Private Sales</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link mylink" id="pills-profile-tab" data-toggle="pill" data-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Ecosystem</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link mylink" id="pills-contact-tab" data-toggle="pill" data-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Exchange</button>
-  </li>
-</ul>
+  
 <div class="tab-content" id="pills-tabContent">
   <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
       <div className='row px-5 mt-5'>
-          <div className='col-md-4 coincontent '>
+          <div className='col-md-3 coincontent '>
               <div className='spancontent'>
-                  <img className='coinimage' src={pantera} />
+                  <img className='coinimage' src={firstone} />
 
-                  <h4 className='coinhead'>Pantera Capital</h4>
+                  <h4 className='coinhead'>Decentralized
+Ecosytem Governance</h4>
 
 
               </div>
@@ -684,11 +642,12 @@ function Home(){
 
           </div>
 
-          <div className='col-md-4 coincontent'>
+          <div className='col-md-3 coincontent'>
           <div className='spancontent'>
-                  <img className='coinimage' src={coinbase} />
+                  <img className='coinimage' src={secondone} />
 
-                  <h4 className='coinhead'>Coinbase Ventures</h4>
+                  <h4 className='coinhead'>Secure
+Network</h4>
 
 
               </div>
@@ -696,14 +655,28 @@ function Home(){
 
           </div>
 
-          <div className='col-md-4 coincontent'>
-          <div className='spancontent'>
-                  <img className='coinimage' src={jump} />
+          <div className='col-md-3 coincontent'>
+                 <div className='spancontent'>
+                  <img className='coinimage' src={thirdone} />
 
-                  <h4 className='coinhead'>Jump Crypto</h4>
+                  <h4 className='coinhead'>Scalable
+Infrastructure</h4>
 
 
-              </div>
+                </div>
+              
+
+          </div>
+
+          <div className='col-md-3 coincontent'>
+                 <div className='spancontent'>
+                  <img className='coinimage' src={fourthone} />
+
+                  <h4 className='coinhead'>Simple
+Integration</h4>
+
+
+                </div>
               
 
           </div>
@@ -713,11 +686,12 @@ function Home(){
       </div>
 
       <div className='row px-5 mt-5'>
-          <div className='col-md-4 coincontent'>
+          <div className='col-md-3 coincontent'>
               <div className='spancontent'>
-                  <img className='coinimage' src={block} />
+                  <img className='coinimage' src={fifthone} />
 
-                  <h4 className='coinhead'>Blockchain</h4>
+                  <h4 className='coinhead'>Affordable
+On-Chain Storage</h4>
 
 
               </div>
@@ -725,11 +699,12 @@ function Home(){
 
           </div>
 
-          <div className='col-md-4 coincontent'>
+          <div className='col-md-3 coincontent'>
           <div className='spancontent'>
-                  <img className='coinimage' src={coinbase} />
+                  <img className='coinimage' src={sixthone} />
 
-                  <h4 className='coinhead'>True Ventures</h4>
+                  <h4 className='coinhead'>Fast
+Transactions</h4>
 
 
               </div>
@@ -737,15 +712,20 @@ function Home(){
 
           </div>
 
-          <div className='col-md-4 coincontent'>
+          <div className='col-md-3 coincontent'>
           <div className='spancontent'>
-             <Link to={'/wallets'} className='btn px-4 py-2 font-weight-700 myconnecttwo'>Safeguard Wallet</Link>
+                  <img className='coinimage' src={sevenone} />
+
+                  <h4 className='coinhead'>Low
+Gas Fees</h4>
 
 
               </div>
               
 
           </div>
+
+          
 
 
 
@@ -958,114 +938,115 @@ function Home(){
     </section>
 
 
-    <section className='blog'>
 
-        <h2 className='supportheading '>Stay updated with our blog</h2>
+    <section className='support'>
 
-        <div className='blogmain mt-4'>
+<h1 className='heroheadtwo'>Decentralization <br/><span>Built<span style={{
+    color:"#00d2ff",
+}}> for the people.</span> Led by the community.</span> <br/> Putting power where it belongs - in the hands of the people. </h1>
 
-            <div className='blogdiv'>
-                <a href='https://www.staderlabs.com/blogs/staking-basics/what-is-eth-solo-staking/'>
-                <img  className='blogimage' src={blogone} />
-                <h4 className='coinhead text-center'>What is Eth Solo Staking?</h4>
 
-                <p className='heroparatwo text-center'>3 mins read / updated on Thu Oct 19 2023</p>
-                </a>
+<div className=''>
+
+        <div className='myflexdiv'>
+
+            <div className='introcard px-5 py-5'>
+
+               <h4 className='introhead'>Introducing</h4>
+               <h1 className='intromain'>Community Ecosystem Governance (CEG)</h1>
+
+
+               <ul className='introlist'>
+                   <li className='introtext'> A decentralized voting framework for the community</li>
+
+                   <li className='introtext'> Empowering individuals to govern the ecosystem</li>
+
+                   <li className='introtext'> A key milestone towards full decentralization</li>
+
+                   <li className='introtext'> Access opportunities for funding</li>
+
+                   <li className='introtext'> Take part today!</li>
+
+                   
+
+               </ul>
+
+
+               <a className='introbtn blackbtntwo'>Participate in CEG</a>
+            
+
             </div>
 
-            <div className='blogdiv'>
-                <a href='https://www.staderlabs.com/blogs/understanding-rseth-tech-explainer/'>
-            <img  className='blogimage' src={blogtwo} />
-                <h4 className='coinhead text-center'>Understanding rsETH | Tech Explainer</h4>
+            <div className='introcard px-5 py-5'>
 
-                <p className='heroparatwo text-center'>2 mins read / updated on Mon Sep 11 2023</p>
-                </a>
+            <h4 className='introhead'>Become a</h4>
+               <h1 className='intromain'>Community Verified Project (CVP)</h1>
+
+
+               <ul className='introlist'>
+                   <li className='introtext'> Increase community engagement</li>
+
+                   <li className='introtext'> Receive marketing support</li>
+
+                   <li className='introtext'> Gain social media spotlight</li>
+
+                   <li className='introtext'> Access opportunities for funding</li>
+
+                   <li className='introtext'> And more…</li>
+
+                   
+
+               </ul>
+
+
+               <a className='introbtn blackbtntwo'>Apply for CVP Status</a>
+               
+
             </div>
-
-            <div className='blogdiv'>
-                <a href='https://www.staderlabs.com/blogs/staking-basics/ethx-vs-solo-staking/'>
-            <img  className='blogimage' src={blogthree} />
-                <h4 className='coinhead text-center'>ETHx vs. Solo Staking: Which is better?</h4>
-
-                <p className='heroparatwo text-center'>3 mins read / updated on Mon Oct 30 2023</p>
-                </a>
-            </div>
-
-
 
         </div>
 
-        <div className='text-center mt-2 py-4'>
 
-            {/* <a href='https://www.staderlabs.com/blogs/' className='btn btn-outline-success text-dark px-4 py-2 font-weight-700 myconnect'>View More</a> */}
+  
 
-         
-
-        </div>
-
-    </section>
-
-
-
-
-    <section id="faqs" className='faq mt-3'>
-
-        <h2 className='supportheading '>Frequently asked questions</h2>
-
-
-        <div class="accordion border-0 col-md-10 m-auto" id="accordionExample">
-  <div class="card">
-    <div class="card-header" id="headingOne">
-      <h2 class="mb-0">
-        <button class="btn  btn-block text-left faqtext" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        What is Crypto Security Tech?
-        </button>
-      </h2>
-    </div>
-    <br/>
-
-    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-      <div class="card-body faqpara">
-      Crypto Security Tech is a cutting-edge platform designed to enhance the security of your crypto assets. It offers a range of advanced tools and technologies to safeguard your crypto wallet and protect your digital assets from potential threats.
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header" id="headingTwo">
-      <h2 class="mb-0">
-        <button class="btn btn-block text-left collapsed faqtext" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-        How does Crypto Security Tech safeguard my crypto assets?
-        </button>
-      </h2>
-    </div>
-
-    <br/>
-    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-      <div class="card-body faqpara">
-      Crypto Security Tech employs state-of-the-art encryption techniques and industry-leading security protocols to create a fortress around your crypto wallet. Our platform undergoes rigorous audits and is constantly updated to stay ahead of emerging threats, providing you with the highest level of protection for your digital assets.
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header" id="headingThree">
-      <h2 class="mb-0">
-        <button class="btn  btn-block text-left collapsed faqtext" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-        What if I lose access to my Crypto Security Tech account?
-        </button>
-      </h2>
-    </div>
-
-    <br/>
-    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-      <div class="card-body faqpara">
-      In the event that you lose access to your Crypto Security Tech account, we have a robust recovery process in place. Our support team, in conjunction with advanced authentication methods, will assist you in regaining access to your account while ensuring the security of your assets.
-      </div>
-    </div>
-  </div>
 </div>
 
+   {/* mycardfive here */}
+  
+</section>
 
-    </section>
+
+<section className='support'>
+
+<h1 className='heroheadtwo'> <span> Metis has committed 250,000 tokens to grants in 2024</span> <br/> Check out what's the current status of the committed allocation
+ </h1>
+
+
+<div className=''>
+
+       <img  src={tracker} className="tracker"/>
+
+  
+
+</div>
+
+   {/* mycardfive here */}
+  
+</section>
+   
+
+
+  
+
+   
+
+
+   
+
+
+
+
+    
 
 
     {/* footer section */}
@@ -1077,15 +1058,15 @@ function Home(){
         <div className='col-md-4 col-sm-12'>
           
 
-            <img className='footerlogo mb-3' src={allwhite} />
+            <img className='footerlogo mb-3' src={metis} />
 
             <div className='flexdiv my-3'style={{
-                visibility:"hidden",
+                
             }}>
-          <a href="https://twitter.com/staderlabs"><img className='topicon' src={twitter} /></a>
-         <a href='https://discord.com/invite/xJURAhSmav'><img className='topicon' src={discord} /></a>
-          <a  href='https://t.me/staderlabs'><img className='topicon' src={telegram} /></a>
-         <a href='https://www.reddit.com/r/StaderLabs_Official/'> <img className='topicon' src={reddit} /></a>
+          <a href="https://twitter.com/MetisL2"><img className='topicon' src={twitter} /></a>
+         <a href='https://discord.com/invite/metis'><img className='topicon' src={discord} /></a>
+          <a  href='https://t.me/MetisL2'><img className='topicon' src={telegram} /></a>
+        
 
       </div>
 
@@ -1098,86 +1079,45 @@ function Home(){
             <div className='row'>
 
             <div className='col-md-4 linkcol text-left'>
-                <h3 className='linkhead mb-4'>Networks</h3>
-
-           
-                    <p className='footlist'>Ethereum</p>
-                    <p className='footlist'>Polygon</p>
-                    <p className='footlist'>Hedera</p>
-                    <p className='footlist'>BNB</p>
-                    <p className='footlist'>Fantom</p>
-                    <p className='footlist'>Near</p>
-                    <p className='footlist'>Terra 2.0</p>
-
-
-            </div>
-
-            <div className='col-md-4 linkcol'>
-                <h3 className='linkhead mb-4'>Governance</h3>
-
-
-           
-                    <p className='footlist'><a href='https://forum.staderlabs.com'>Community Forum</a></p>
-                    <p className='footlist'><a href='https://snapshot.org/#/staderdao.eth'>Snapshot</a></p>
-                    <p className='footlist'><a href='https://www.staderlabs.com/sd/defi/'>SD DeFi</a></p>
-                    <p className='footlist'><a href='https://staderlabs.notion.site/staderlabs/Introducing-SD-1160c9a4217d477eaafb963e21f90aba'>SD Details</a></p>
-                    
-            </div>
-
-            <div className='col-md-4 linkcol'>
-                <h3 className='linkhead mb-4'>Analytics</h3>
-
                 
 
-
            
-                    <p className='footlist'><a href='https://dune.com/stader_labs/dashboard-catalogue'>Dune Analytics</a></p>
+                    <p className='footlist'>Developers</p>
+                    <p className='footlist'>Knowledge</p>
+                    <p className='footlist'>Careers</p>
+                    <p className='footlist'>Subscribe</p>
+                    <p className='footlist'>Q&A</p>
+                    <p className='footlist'>Brand Assets</p>
                    
-            </div>
-
-            </div>
-
-            <div className='row mt-4'>
-
-            <div className='col-md-4 linkcol text-left'>
-                <h3 className='linkhead mb-4'>Developers</h3>
-
-           
-                    <p className='footlist'><a href=''>Github</a></p>
-                    <p className='footlist'><a href='https://www.staderlabs.com/docs/ETHx%20Litepaper.pdf'>ETHx Litepaper</a></p>
-                    <p className='footlist'><a href=''>Docs</a></p>
-                    
 
 
             </div>
 
             <div className='col-md-4 linkcol'>
-                <h3 className='linkhead mb-4'>About</h3>
+               
 
 
            
-                    <p className='footlist'><a href=''>About</a></p>
-                    <p className='footlist'><a href=''>Blog</a></p>
-                    <p className='footlist'><a href='https://www.staderlabs.com/Stader_press_kit.zip'>Download Press Kit</a></p>
-                
+                    <p className='footlist'><a href=''>Community</a></p>
+                    <p className='footlist'><a href=''>Company</a></p>
+                    <p className='footlist'><a href=''>Ecosystem</a></p>
+                    <p className='footlist'><a href=''>Terms and Condition</a></p>
+                    <p className='footlist'><a href=''>Events</a></p>
+                    <p className='footlist'><a href=''>Contact</a></p>
                     
             </div>
 
-            <div className='col-md-4 linkcol'>
-                   
-                   
-            </div>
+           
 
             </div>
+
+           
 
         </div>
 
        
 
-       <div className='footerfooter'>
-           <p className='foottextt'>© Copyright 2023 Crypto Security Tech. All rights reserved.</p>
-           <p className='foottextt'>Terms of service | Privacy policy</p>
-       </div>
+       
 
        </div>
 

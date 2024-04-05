@@ -1,7 +1,13 @@
+body{
+    background-color: black;
+}
+
 .mynav{
     padding-right: 100px;
     padding-left: 100px;
-    background-color: #061121;
+    background-color: black;
+  width: 100%;
+  overflow: hidden;
 }
 
 .mobilenav{
@@ -75,26 +81,204 @@
 }
 
 .herosection{
-    min-height:600px;
-    background-color: #00254F;
+    min-height:400px;
+    background-color: black;
 
     padding-left: 100px;
     padding-top: 120px;
-    background-image: url("https://res.cloudinary.com/edifice-solutions/image/upload/v1699446542/Group_17_dyjbcx.svg");
-    background-repeat: no-repeat;
-    background-position: 630px;
-    background-size: 600px;
+   
 }
 
 .herohead{
     font-weight: 600;
-    line-height: 140%;
-    font-size: 50px;
-    max-width: 550px;
+    line-height: 180%;
+    font-size: 40px;
+ 
     color: white;
      font-family: Gilroy,Helvetica,sans-serif,system-ui;
   
 }
+
+.heroheadtwo{
+    font-weight: 600;
+    line-height: 180%;
+    font-size: 22px;
+ 
+    color: white;
+     font-family: Gilroy,Helvetica,sans-serif,system-ui;
+  
+}
+
+.herohead span{
+    font-weight: 600;
+    line-height: 60%;
+    font-size: 80px;
+ 
+    color: white;
+     font-family: Gilroy,Helvetica,sans-serif,system-ui;
+}
+
+.heroheadtwo span{
+    font-weight: 600;
+    line-height: 60%;
+    font-size: 60px;
+ 
+    color: white;
+     font-family: Gilroy,Helvetica,sans-serif,system-ui;
+}
+
+
+
+
+.myvideo{
+    object-fit: cover;
+    width:100%;
+
+ 
+     height:500px;
+     
+ 
+     margin-right: 150px;
+     border-radius: 30px;
+  position: relative;
+   
+}
+
+.content {
+    z-index: 100;
+    margin-top: 70px;
+    position: absolute;
+
+    padding-left: 50px;
+ 
+    max-width: 40%;
+  
+}
+
+.content p{
+    color:white;
+    font-size:18px;
+    font-weight: 500;
+    text-align: justify;
+}
+.flexme{
+    max-width: 85%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.blackbtn{
+    background-color: black;
+    color: white;
+    position: static;
+    top: auto;
+    bottom: 70px;
+    left: 70px;
+    border:none;
+    border-radius: 20px;
+    right: auto;
+    padding:10px 20px;
+
+}
+
+.blackbtn:hover{
+    background-color: #00d2ff;
+    color: black;
+    position: static;
+    top: auto;
+    bottom: 70px;
+    left: 70px;
+    border:none;
+    border-radius: 20px;
+    right: auto;
+    padding:10px 20px;
+}
+
+.whitebtn{
+    background-color: white;
+    color: black;
+    position: static;
+    top: auto;
+    bottom: 70px;
+    left: 70px;
+    border:none;
+    border-radius: 20px;
+    right: auto;
+    padding:10px 20px;
+
+}
+
+.whitebtntwo{
+    background-color: white;
+    color: black;
+    position: static;
+    top: auto;
+    bottom: 70px;
+    left: 70px;
+    border:none;
+    border-radius: 20px;
+    right: auto;
+    padding:12px 50px;
+
+}
+
+
+.blackbtntwo{
+    background-color: black;
+    color: white;
+    position: static;
+    top: auto;
+    bottom: 70px;
+    left: 70px;
+    border:none;
+    border-radius: 20px;
+    right: auto;
+    padding:12px 50px;
+
+}
+.whitebtntwo:hover{
+    background-color:#00d2ff;
+    color: black;
+    position: static;
+    top: auto;
+    bottom: 70px;
+    left: 70px;
+    border:none;
+    border-radius: 20px;
+    right: auto;
+    padding:12px 50px;
+
+}
+
+.blackbtntwo:hover{
+    background-color:#00d2ff;
+    color: black;
+    position: static;
+    top: auto;
+    bottom: 70px;
+    left: 70px;
+    border:none;
+    border-radius: 20px;
+    right: auto;
+    padding:12px 50px;
+
+}
+
+
+
+.whitebtn:hover{
+    background-color: #00d2ff;
+    color: black;
+    position: static;
+    top: auto;
+    bottom: 70px;
+    left: 70px;
+    border:none;
+    border-radius: 20px;
+    right: auto;
+    padding:10px 20px;
+}
+
 
 .heropara{
     font-size: 13px;
@@ -124,6 +308,48 @@
     
 }
 
+.transaction{
+    background-color: black;
+    padding-right: 100px;
+    padding-left: 100px;
+    margin-top: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.blocks{
+    width:160px;
+    height: 90px;
+    color: #fff;
+    background-color: #303030;
+    transition: background-color .1s, margin-top .1s, filter .1s;
+    border-radius: 20px;
+    border: none;
+}
+
+.blocks:hover{
+    width:170px;
+    height: 95px;
+    color: black;
+    background-color: #00d2ff;
+    transition: background-color .1s, margin-top .1s, filter .1s;
+    border-radius: 20px;
+    border: none;
+}
+
+
+.line{
+    color:rgb(219, 217, 217);
+    border:1.2px solid rgb(237, 236, 236);
+    margin-right: 100px;
+    margin-left: 100px;
+}
+.blocks p{
+    font-size: 13px;
+    
+}
+
 .boxcontentpara{
     font-size: 12px;
     font-weight: 700;
@@ -144,11 +370,13 @@
 
 .support{
     min-height:600px;
-    background-color: #061121;
+    background-color: black;
 
     
     padding-top: 120px;
     padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
     
 }
 
@@ -172,13 +400,93 @@
      text-align: center;
 }
 
-.carddiv{
+.myflexdiv{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    
+    justify-content: space-between;
+    margin-top: 80px;
 }
 
+.idcardone{
+    width: 48%;
+    min-height:300px;
+    background-image: linear-gradient(109deg, #7a26ae, #3d649b 98.5%);
+    border: none;
+    border-radius: 20px;
+}
+
+
+.introcard{
+    width: 48%;
+    min-height:300px;
+    background-image: linear-gradient(110deg, #5052a1 2.34%, #24aeb8 99.94%);
+    border: none;
+    border-radius: 20px;
+    color:white;
+
+}
+
+
+.introcard:hover{
+    width: 48%;
+    min-height:300px;
+    background-image: linear-gradient(110deg, white 2.34%, white 99.94%);
+    border: none;
+    border-radius: 20px;
+    color:black;
+
+}
+
+.introcard h4{
+    font-size:22px;
+    font-weight:700;
+}
+
+.introcard h1{
+    font-size:30px;
+    font-weight:bold;
+}
+
+.introcard li{
+    font-size:18px;
+    font-weight:600;
+   margin-top: 13px;
+}
+
+.idcardtwo{
+    width: 48%;
+    min-height:300px;
+    background-image: linear-gradient(110deg, #5052a1 2.34%, #24aeb8 99.94%);
+    border: none;
+    border-radius: 20px;
+
+}
+
+.tracker{
+    max-width: 90%;
+    margin-top: 40px;
+}
+
+.zindex{
+    z-index: 100;
+    margin-top: -50px;
+}
+
+.idcardimage{
+    width:140px;
+}
+
+.idcardhead{
+    color:white;
+    font-weight: bold;
+    font-size:30px;
+}
+
+.idcardpara{
+    color:white;
+    font-weight: 700;
+    font-size: 25px;
+}
 .hidemobile{
     display: block;
 }
@@ -345,20 +653,21 @@
 
 .partners {
     min-height:500px;
-    background-color: #061121;
+    background-color: black;
 
     padding-top: 50px;
 
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
     margin:0px;
 }
 
 .greendiv{
-    background-color: white;
+    background-color: black;
     border-radius: 20px;
     height: 300px;
     margin-top: 50px;
+    color:white;
 }
 
 .myrow{
@@ -458,7 +767,7 @@
 
 .footer{
     min-height: 650px;
-    background-color: #061121;
+    background-color: black;
     padding-left: 100px;
     padding-right: 100px;
     padding-top: 100px;
@@ -605,6 +914,44 @@ font-weight: 300;
         
     }
 
+    .herohead{
+        font-weight: 600;
+        line-height: 180%;
+        font-size: 30px;
+     
+        color: white;
+         font-family: Gilroy,Helvetica,sans-serif,system-ui;
+      
+    }
+    
+    .heroheadtwo{
+        font-weight: 600;
+        line-height: 180%;
+        font-size: 22px;
+     
+        color: white;
+         font-family: Gilroy,Helvetica,sans-serif,system-ui;
+      
+    }
+    
+    .herohead span{
+        font-weight: 600;
+        line-height: 60%;
+        font-size: 50px;
+     
+        color: white;
+         font-family: Gilroy,Helvetica,sans-serif,system-ui;
+    }
+
+    .heroheadtwo span{
+        font-weight: 600;
+        line-height: 60%;
+        font-size: 40px;
+     
+        color: white;
+         font-family: Gilroy,Helvetica,sans-serif,system-ui;
+    }
+
     .logohead{
         color: #142528;
         font-size: 20px;
@@ -613,26 +960,17 @@ font-weight: 300;
     }
 
     .logoimage{
-        width:10px;
+        width:100px;
     }
 
     .herosection{
-        min-height:650px;
-        background-color: #00254F;
+        min-height:400px;
+    background-color: black;
 
-      
-    
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-top: 299px;
-        margin-top: 90px;
-    
-       
-      
-         background-image: url("https://res.cloudinary.com/edifice-solutions/image/upload/v1699446542/Group_17_dyjbcx.svg"); 
-        background-repeat: no-repeat; 
-        background-size:430px;
-        background-position: top;
+    padding-left: 50px;
+    padding-top: 50px;
+    padding-top: 100px;
+    padding-bottom: 100px;
         
     }
 
@@ -656,6 +994,133 @@ font-weight: 300;
         text-align: center;
     } 
 
+    .myvideo{
+        object-fit: cover;
+        width:100%;
+    
+     
+         height:400px;
+         
+     
+         margin-right: 0px;
+         border-radius: 30px;
+      position: relative;
+       
+    }
+    
+    .content {
+        z-index: 100;
+        margin-top: 70px;
+        position: absolute;
+    
+        padding-left: 50px;
+     
+        max-width: 80%;
+      
+    }
+    
+    .content p{
+        color:white;
+        font-size:18px;
+        font-weight: 500;
+        text-align: justify;
+    }
+    .flexme{
+        max-width: 85%;
+        display: flex;
+        justify-content: space-between;
+        
+    }
+
+
+    .transaction{
+        background-color: black;
+        padding-right: 30px;
+        padding-left: 30px;
+        margin-top: 70px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        max-width: 100%;
+        overflow-x: scroll;
+    }
+    
+    .blocks{
+        width:140px;
+        height: 80px;
+        color: #fff;
+        background-color: #303030;
+        transition: background-color .1s, margin-top .1s, filter .1s;
+        border-radius: 20px;
+        border: none;
+    }
+
+
+    .myflexdiv{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 80px;
+        min-height: 700px;
+    }
+    
+    .idcardone{
+        width: 100%;
+        min-height:300px;
+        background-image: linear-gradient(109deg, #7a26ae, #3d649b 98.5%);
+        border: none;
+        border-radius: 20px;
+    }
+
+    .idcardtwo{
+        width: 100%;
+        min-height:300px;
+        background-image: linear-gradient(110deg, #5052a1 2.34%, #24aeb8 99.94%);
+        border: none;
+        border-radius: 20px;
+    
+    }
+
+
+    .introcard{
+        width: 100%;
+        min-height:300px;
+        background-image: linear-gradient(110deg, #5052a1 2.34%, #24aeb8 99.94%);
+        border: none;
+        border-radius: 20px;
+        color:white;
+        margin-top: 40px;
+    
+    }
+    
+    
+    .introcard:hover{
+        width: 100%;
+        min-height:300px;
+        background-image: linear-gradient(110deg, white 2.34%, white 99.94%);
+        border: none;
+        border-radius: 20px;
+        color:black;
+        margin-top: 40px;
+    
+    }
+    
+    .introcard h4{
+        font-size:20px;
+        font-weight:700;
+    }
+    
+    .introcard h1{
+        font-size:27px;
+        font-weight:bold;
+    }
+    
+    .introcard li{
+        font-size:16px;
+        font-weight:600;
+       margin-top: 13px;
+    }
+    
 
     .heroparatwo{
         font-size: 10px;
@@ -841,7 +1306,7 @@ font-weight: 300;
 
     .support{
         min-height:600px;
-        background-color: #061121;
+        background-color: black;
     
         
         padding-top: 70px;
@@ -856,7 +1321,7 @@ font-weight: 300;
 
 .partners {
     min-height:800px;
-    background-color: #061121;
+    background-color: black;
 
     padding-left: 10px;
     padding-right: 10px;
@@ -865,7 +1330,7 @@ font-weight: 300;
 }
 
 .greendiv{
-    background-color: white;
+    background-color: black;
     border-radius: 20px;
     min-height: 730px;
     margin-top: 50px;
@@ -999,7 +1464,7 @@ font-weight: 300;
 
 .mobilenav{
     display: block;
-    background-color:#061121;
+    background-color:black;
     
 }
 
@@ -1044,6 +1509,7 @@ font-weight: 300;
         color:whitesmoke;
         font-size:12px;
         list-style: none;
+        z-index: 1000;
     }
 
    .mytoggle{
