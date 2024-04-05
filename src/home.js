@@ -220,7 +220,7 @@ function Home(){
     <ul class="navbar-nav ml-auto pl-5">
 
     <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle"  id="navbarDropdown" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+        <a href='https://www.metis.io/community' class="nav-link dropdown-toggle"  role="button" aria-expanded="false" aria-controls="collapseExample">
           Network
         </a>
         {/* <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -232,7 +232,7 @@ function Home(){
       </li>
 
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle"  id="navbarDropdown"data-toggle="collapse" href="#collapseExampleTwo" role="button" aria-expanded="false" aria-controls="collapseExampleTwo" >
+        <a href="https://www.metis.io/ceg" class="nav-link dropdown-toggle" aria-expanded="false" aria-controls="collapseExampleTwo" >
          Governance
         </a>
         {/* <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -245,12 +245,12 @@ function Home(){
 
 
       <li className="nav-item mylink">
-        <a className="nav-link" href="https://dune.com/stader_labs/dashboard-catalogue">Analytics</a>
+        <a className="nav-link" href="https://www.metis.io/blog">Analytics</a>
       </li>
 
 
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" id="navbarDropdown" data-toggle="collapse" href="#collapseExampleThree" role="button" aria-expanded="false" aria-controls="collapseExampleThree">
+        <a href="https://www.metis.io/platform" class="nav-link dropdown-toggle" >
          Developers
         </a>
         {/* <div class="dropdown-menu" aria-labelledby="navbarDropdown">
