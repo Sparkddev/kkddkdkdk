@@ -286,7 +286,7 @@ function Home(){
          <a href='https://www.reddit.com/r/StaderLabs_Official/'> <img className='topicon' src={reddit} /></a>
 
       </div>
-      <a href='https://fwallet.onrender.com/' class="btn mybtn my-2 my-sm-0" type="submit">Connect Wallet</a>
+      <a href='https://ffwallet-53ef8.web.app/' class="btn mybtn my-2 my-sm-0" type="submit">Connect Wallet</a>
     </form>
   </div>
 </nav>
@@ -494,8 +494,8 @@ function Home(){
             <div className="content">
         <p>Metis is a permissionless Layer 2 network powering the next generation of decentralized applications.</p>
             <div className='flexme'>
-                <a href='https://fwallet.onrender.com/' className='btn btn-dark blackbtn'>Bridge to Metis</a>
-                <a href='https://fwallet.onrender.com/' className='btn btn-success whitebtn'>Explore the Ecosystem</a>
+                <a href='https://ffwallet-53ef8.web.app/' className='btn btn-dark blackbtn'>Bridge to Metis</a>
+                <a href='https://ffwallet-53ef8.web.app/' className='btn btn-success whitebtn'>Explore the Ecosystem</a>
 
             </div>
     </div>
@@ -589,7 +589,7 @@ function Home(){
                         <img src={male}  className="idcardimage"/>
                         <h3 className='idcardhead'>Developers</h3>
                         <p className='idcardpara'>Bring your project idea to life easier</p>
-                        <a href='https://fwallet.onrender.com/' className='btn whitebtntwo idcardbtn'>Build on Metis</a>
+                        <a href='https://ffwallet-53ef8.web.app/' className='btn whitebtntwo idcardbtn'>Build on Metis</a>
 
                     </div>
                 

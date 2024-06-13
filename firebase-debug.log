@@ -1,0 +1,86 @@
+[debug] [2024-06-13T17:53:35.541Z] ----------------------------------------------------------------------
+[debug] [2024-06-13T17:53:35.544Z] Command:       /usr/local/bin/node /usr/local/bin/firebase init
+[debug] [2024-06-13T17:53:35.544Z] CLI Version:   11.21.0
+[debug] [2024-06-13T17:53:35.545Z] Platform:      darwin
+[debug] [2024-06-13T17:53:35.545Z] Node Version:  v18.16.0
+[debug] [2024-06-13T17:53:35.546Z] Time:          Thu Jun 13 2024 10:53:35 GMT-0700 (Pacific Daylight Time)
+[debug] [2024-06-13T17:53:35.546Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-06-13T17:53:35.627Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-06-13T17:53:35.627Z] > authorizing via signed-in user (mikefix246@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/mac/Documents/akamu/stader
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-06-13T17:53:44.418Z] Using project from CLI flag: ffwallet-53ef8
+[debug] [2024-06-13T17:53:44.421Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ffwallet-53ef8 [none]
+[debug] [2024-06-13T17:53:46.241Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ffwallet-53ef8 403
+[debug] [2024-06-13T17:53:46.241Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ffwallet-53ef8 {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2024-06-13T17:53:46.242Z] HTTP Error: 403, The caller does not have permission
+[debug] [2024-06-13T17:53:46.547Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at responseToError (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/usr/local/lib/node_modules/firebase-tools/lib/apiv2.js:288:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project ffwallet-53ef8. Please make sure the project exists and your account has permission to access it.
+[debug] [2024-06-13T17:59:23.381Z] ----------------------------------------------------------------------
+[debug] [2024-06-13T17:59:23.387Z] Command:       /usr/local/bin/node /usr/local/bin/firebase init
+[debug] [2024-06-13T17:59:23.388Z] CLI Version:   11.21.0
+[debug] [2024-06-13T17:59:23.388Z] Platform:      darwin
+[debug] [2024-06-13T17:59:23.388Z] Node Version:  v18.16.0
+[debug] [2024-06-13T17:59:23.403Z] Time:          Thu Jun 13 2024 10:59:23 GMT-0700 (Pacific Daylight Time)
+[debug] [2024-06-13T17:59:23.404Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-06-13T17:59:23.501Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-06-13T17:59:23.501Z] > authorizing via signed-in user (mikefix246@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/mac/Documents/akamu/stader
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-06-13T17:59:32.204Z] Using project from CLI flag: ffwallet-53ef8
+[debug] [2024-06-13T17:59:32.207Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ffwallet-53ef8 [none]
+[debug] [2024-06-13T17:59:33.555Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ffwallet-53ef8 403
+[debug] [2024-06-13T17:59:33.555Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ffwallet-53ef8 {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2024-06-13T17:59:33.556Z] HTTP Error: 403, The caller does not have permission
+[debug] [2024-06-13T17:59:33.870Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at responseToError (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/usr/local/lib/node_modules/firebase-tools/lib/apiv2.js:288:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project ffwallet-53ef8. Please make sure the project exists and your account has permission to access it.
